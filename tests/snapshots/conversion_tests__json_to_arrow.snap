@@ -1,0 +1,55 @@
+---
+source: tests/conversion_tests.rs
+expression: got
+---
+Schema {
+    fields: [
+        Field {
+            name: "a",
+            data_type: Boolean,
+            nullable: true,
+            dict_id: 0,
+            dict_is_ordered: false,
+            metadata: None,
+        },
+        Field {
+            name: "one",
+            data_type: Struct(
+                [
+                    Field {
+                        name: "another",
+                        data_type: Struct(
+                            [
+                                Field {
+                                    name: "nested",
+                                    data_type: Null,
+                                    nullable: true,
+                                    dict_id: 0,
+                                    dict_is_ordered: false,
+                                    metadata: None,
+                                },
+                            ],
+                        ),
+                        nullable: true,
+                        dict_id: 0,
+                        dict_is_ordered: false,
+                        metadata: None,
+                    },
+                    Field {
+                        name: "b",
+                        data_type: Int64,
+                        nullable: true,
+                        dict_id: 0,
+                        dict_is_ordered: false,
+                        metadata: None,
+                    },
+                ],
+            ),
+            nullable: true,
+            dict_id: 0,
+            dict_is_ordered: false,
+            metadata: None,
+        },
+    ],
+    metadata: {},
+}
